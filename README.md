@@ -1,4 +1,4 @@
-<h1 align="center">Trabalho Myfinance</h1> 
+<h1 align="center">Trabalho MyFinance</h1> 
 
 ## 📕 Sobre
 
