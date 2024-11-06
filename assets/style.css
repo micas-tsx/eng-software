@@ -9,9 +9,11 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
+    width: 100%;
+
 }
 
-#txtBusca {
+.txtBusca {
     border: green;
     width: 100%;
     placeholder: #FFFFFF;
@@ -21,8 +23,4 @@ body {
     padding: 10px;
     width: 916px;
     margin: 30px;
-}
-
-#txtBusca:hover {
-    border: #6AB023;
 }
