@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myfinance</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <!-- Lado esquerdo com mensagem de boas-vindas -->
+          <div class="col-md-6 welcome-section">
+            <h1><span class="highlight">BEM VINDA</span><br>BEM VINDO (A)<br><span class="highlight">BEM VINDO</span></h1>
+            <h2 class="logo">my <span>finance</span></h2>
+            <p>Crie a sua conta e comece a organizar as suas finanças de uma forma simples!</p>
+          </div>
+          
+          <!-- Lado direito com formulário de login -->
+          <div class="col-md-6 login-section d-flex align-items-center justify-content-center">
+            <div class="login-box">
+                <div class="logo">
+                    <img src="../páginalogin/images/Frame.png" alt="My Finance Logo" class="logo-image">
+                </div>
+                <form>
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><img src="../páginalogin/images/Data.png" alt="Ícone de usuário" style="width: 16px;"></span>
+                          </div>
+                          <input type="email" class="form-control" id="email" placeholder="Usuário ou email">
+                        </div>
+                      </div>
+                      
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><img src="../páginalogin/images/lock.png" alt="Ícone de senha" style="width: 16px;"></span>
+                          </div>
+                          <input type="password" class="form-control" id="password" placeholder="Senha">
+                        </div>
+                      </div>
+                <div class="form-check d-flex justify-content-between align-items-center">
+                    <div>
+                      <input type="checkbox" class="form-check-input" id="remember">
+                      <label class="form-check-label" for="remember"><b>Mantenha-me Conectado</b></label>
+                    </div>
+                    <a href="#" class="forgot-password"><b>Recuperar senha</b></a>
+                  </div>
+                <div class="botao">
+                <button type="submit" class="btn btn-primary btn-block">ENTRAR</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
