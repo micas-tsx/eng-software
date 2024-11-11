@@ -1,9 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myfinance</title>
+    <link rel="shortcut icon" href="/páginalogin/images/shortcut.png" type="image/x-icon">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
@@ -13,16 +13,18 @@
         <div class="row no-gutters">
           <!-- Lado esquerdo com mensagem de boas-vindas -->
           <div class="col-md-6 welcome-section">
-            <h1><span class="highlight">BEM VINDA</span><br>BEM VINDO (A)<br><span class="highlight">BEM VINDO</span></h1>
-            <h2 class="logo">my <span>finance</span></h2>
-            <p>Crie a sua conta e comece a organizar as suas finanças de uma forma simples!</p>
+            <i></i>
+            <img id="fontediv" src="/páginalogin/images/fontediv.png">
+            <img id="logodiv" src="/páginalogin/images/logodiv.png">
+            <p class="textodiv">Crie a sua conta e comece a organizar as suas finanças de uma forma simples!</p>
+            <button class="btn-create-account">Criar conta</button>
           </div>
           
           <!-- Lado direito com formulário de login -->
           <div class="col-md-6 login-section d-flex align-items-center justify-content-center">
             <div class="login-box">
                 <div class="logo">
-                    <img src="../páginalogin/images/Frame.png" alt="My Finance Logo" class="logo-image">
+                    <img src="/páginalogin/images/Frame.png" alt="My Finance Logo" class="logo-image">
                 </div>
                 <form>
                     <div class="form-group">
@@ -42,17 +44,19 @@
                           <input type="password" class="form-control" id="password" placeholder="Senha">
                         </div>
                       </div>
-                <div class="form-check d-flex justify-content-between align-items-center">
+                <div class="form-check d-flex justify-content-flex-start align-items-center">
                     <div>
                       <input type="checkbox" class="form-check-input" id="remember">
                       <label class="form-check-label" for="remember"><b>Mantenha-me Conectado</b></label>
                     </div>
-                    <a href="#" class="forgot-password"><b>Recuperar senha</b></a>
-                  </div>
-                <div class="botao">
-                <button type="submit" class="btn btn-primary btn-block">ENTRAR</button>
                 </div>
-              </form>
+                <div class="botao">
+                <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                </div>
+                </form>
+                <div class="access-difficulty">
+                  <p>Está com dificuldade para acessar sua conta? <a href="#"><p>Recuperar Senha</p></a></p>
+                </div>
             </div>
           </div>
         </div>
