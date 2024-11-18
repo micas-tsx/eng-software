@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #D8D5BD;
+    background: #6AB023;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -25,10 +25,11 @@ body {
     border: #6AB023 1px solid;
     border-radius: 60px;
     hight: 64px;
-    width: 60%;
+    width: 35%;
     padding: 10px;
     margin: 30px;
     display: flex;
+    margin-left: auto;
 }
 
 .busca input {
@@ -52,12 +53,6 @@ body {
 .icons {
     display: flex;
 }
-
-.aside-icons {
-    display: flex-wrap;
-    justify-content: space-between;
-}
-
 .container { 
     display: flex; 
 }
@@ -71,50 +66,84 @@ body {
     line-height: 100px; 
     font-size: 18px;
 }
+/* codigo da ia*/
 main {
-    padding: 20px;
     display: flex; /* Alinha o aside e o conteúdo lado a lado */
     flex-grow: 1; /* Faz o main ocupar o espaço restante */
+    position: relative; /* Para posicionar as seções */
 }
 aside {
-    width: 200px;
-    background-color: #f4f4f4;
-    padding: 15px;
+    width: 75px; /* Ajusta a largura do aside para ser menor */
+    background-color: white; /* Define o fundo como branco */
+    padding: 10px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Define um border-radius médio */
+    margin: 10px; /* Adiciona uma margem para afastar do conteúdo */
+    display: flex; /* Define o aside como um contêiner flexível */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    justify-content: space-between; /* Espaça os itens para ocupar todo o espaço vertical */
+}
+.menu-item {
+    margin-bottom: 15px; /* Espaço entre os links */
+    text-align: center; /* Centraliza o texto dos links */
+    position: relative; /* Para o círculo */
+}
+
+.menu-button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Faz o botão ocupar toda a largura */
+}
+
+.menu-button.active {
+    background-color: #45a049; /* Cor do botão ativo */
 }
 .content {
-    display: flex;
-    flex-direction: column; /* Coloca as divs em coluna */
-    flex-grow: 1; /* Faz a área de conteúdo ocupar o espaço restante */
-    maring: 10xp;
+    flex-grow: 1;
+    padding: 20px;
+    display: none; /* Esconde todas as divs de conteúdo inicialmente */
+}
+
+.content.active {
+    display: block; /* Mostra a div de conteúdo ativa */
+}
+.active {
+    display: block; /* Mostra a seção ativa */
+}
+
+.container {
+    flex: 1; /* O container ocupa o espaço restante */
+    padding: 10px;
 }
 .row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
-    flex-grow: 1; /* Faz as divs na linha ocuparem o espaço disponível */
+    margin-bottom: 10px; /* Espaçamento entre as linhas */
+    height: 70%;
 }
 .box {
+    flex: 1; /* Cada box ocupa espaço igual */
+    margin: 0 5px; /* Espaçamento entre as boxes */
     padding: 20px;
-    background-color: #e2e2e2;
+    background-color: #ffffff; /* Cor de fundo branca */
+    border-radius: 10px; /* Border radius médio */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
     text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    flex-grow: 1; /* Faz cada box crescer para ocupar o espaço */
-    margin: 0 5px; /* Espaço entre as divs */
 }
-.box:nth-child(1) {
-    flex: 1; /* Div 1 */
+.box.middle {
+    flex: 2; /* Aumenta a largura da div do meio */
 }
-.box:nth-child(2) {
-    flex: 2; /* Div 2 (meio) ocupa mais espaço */
-}
-.box:nth-child(3) {
-    flex: 1; /* Div 3 */
+.box:last-child {
+    margin-right: 0; /* Remove margem direita da última box */
 }
 .bottom-box {
-    padding: 40px; /* Aumenta o padding do bottom-box */
-    background-color: #c2c2c2;
+    background-color: #ffffff; /* Cor de fundo branca */
+    border-radius: 10px; /* Border radius médio */
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    flex-grow: 0; /* Não faz o bottom-box crescer */
+    height: 23%;
 }

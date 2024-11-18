@@ -10,6 +10,9 @@
 </head>
 <body>
     <header class="head">
+        <div class="logo">
+            <img src="assets/images/logo.svg" alt="logo">
+        </div>
         <div class="busca">
             <input type="text" class="txtBusca" />
             <img class="lupa" src="assets/images/lupa.svg" alt="buscar">
@@ -26,23 +29,39 @@
     
     <main>
         <aside>
-            <h2>Menu</h2>
-            <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
+            <div class="menu-item" id="link1-item" onclick="setActive(this, 'content1')">
+                <button class="menu-button" onclick="showSection('section1', this)">Link 1</button>
+            </div>
+            <div class="menu-item" id="link2-item" onclick="setActive(this, 'content2')">
+                <button class="menu-button" onclick="showSection('section2', this)">Link 2</button>
+            </div>
+            <div class="menu-item" id="link3-item" onclick="setActive(this, 'content3')">
+                <button class="menu-button" onclick="showSection('section3', this)">Link 3</button>
+            </div>
+            <div class="menu-item" id="link4-item" style="margin-top: auto;">
+                <button class="menu-button" onclick="showSection('section4', this)">Link 4</button>
+            </div>
         </aside>
     
-        <div class="content">
+        <div class="content active container" id="content1">
             <div class="row">
                 <div class="box">Div 1</div>
-                <div class="box">Div 2</div>
+                <div class="box middle">Div 2</div>
                 <div class="box">Div 3</div>
             </div>
-            <div class="bottom-box">Div embaixo das 3</div>
+            <div class="bottom-box">Div Abaixo</div>
+        </div>
+        
+        <div class="content" id="content2">
+            <div class="div2">Div do Link 2</div>
+        </div>
+
+        <div class="content" id="content3">
+            <div class="div3">Div do Link 3 (maior)</div>
         </div>
     </main>
     
+    <script src="assets/index.js"></script>
+
 </body>
 </html>
