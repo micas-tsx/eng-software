@@ -2,6 +2,8 @@ body {
     margin: 0;
     background-color: #D8D5BD;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .head {
@@ -36,7 +38,6 @@ body {
     margin-left: 10px;
 }
 
-
 .notification img, 
 .user img {
     cursor: pointer;
@@ -52,20 +53,68 @@ body {
     display: flex;
 }
 
-.aside {
-    background-color: #F5F5F5;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 3%;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 50px;
-}
-
 .aside-icons {
     display: flex-wrap;
     justify-content: space-between;
+}
+
+.container { 
+    display: flex; 
+}
+
+.full-width { 
+    width: 100%; 
+    height: 100px; 
+    background-color: lightgreen; 
+    margin: 5px; 
+    text-align: center; 
+    line-height: 100px; 
+    font-size: 18px;
+}
+main {
+    padding: 20px;
+    display: flex; /* Alinha o aside e o conteúdo lado a lado */
+    flex-grow: 1; /* Faz o main ocupar o espaço restante */
+}
+aside {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.content {
+    display: flex;
+    flex-direction: column; /* Coloca as divs em coluna */
+    flex-grow: 1; /* Faz a área de conteúdo ocupar o espaço restante */
+    maring: 10xp;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Faz as divs na linha ocuparem o espaço disponível */
+}
+.box {
+    padding: 20px;
+    background-color: #e2e2e2;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Faz cada box crescer para ocupar o espaço */
+    margin: 0 5px; /* Espaço entre as divs */
+}
+.box:nth-child(1) {
+    flex: 1; /* Div 1 */
+}
+.box:nth-child(2) {
+    flex: 2; /* Div 2 (meio) ocupa mais espaço */
+}
+.box:nth-child(3) {
+    flex: 1; /* Div 3 */
+}
+.bottom-box {
+    padding: 40px; /* Aumenta o padding do bottom-box */
+    background-color: #c2c2c2;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 0; /* Não faz o bottom-box crescer */
 }
