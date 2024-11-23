@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/styles/cadastro.css">
+</head>
+<body>
+    <!-- Seção à esquerda com gradiente -->
+    <div class="left-section"></div>
+
+    <!-- Seção do meio com o formulário -->
+    <div class="center-section">
+        <div class="formularios">
+            <img src="/images/shortcut.png" alt="Logo MyFinance" class="logo">
+            <h1>Crie sua Conta</h1>
+
+            <form>
+                <div class="form-row">
+                    <!-- Nome Completo -->
+                    <div class="form-group">
+                        <label for="full-name">Nome Completo</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <!-- Nome Social -->
+                    <div class="form-group">
+                        <label for="social-name">Nome Social</label>
+                        <input type="text" id="social-name" name="social-name" placeholder="Digite seu nome social">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <!-- Profissão -->
+                    <div class="form-group">
+                        <label for="profession">Profissão</label>
+                        <input type="text" id="profession" name="profession" placeholder="Digite sua atual profissão">
+                    </div>
+
+                    <!-- Telefone -->
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(99) 99999-9999" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <!-- E-mail -->
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <!-- Confirmar E-mail -->
+                    <div class="form-group">
+                        <label for="confirm-email">Confirmar E-mail</label>
+                        <input type="email" id="confirm-email" name="confirm-email" placeholder="Digite seu e-mail novamente" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <!-- Senha -->
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <!-- Confirmar Senha -->
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar Senha</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Digite sua senha novamente" required>
+                    </div>
+                </div>
+
+                <!-- Termos de Uso -->
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a>.</label>
+                </div>
+
+                <!-- Botões -->
+                <button type="submit" class="btn-primary">Criar conta</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Seção à direita com gradiente -->
+    <div class="right-section"></div>
+</body>
+</html>
