@@ -1,9 +1,11 @@
 body {
+    min-width: 100vh;
     margin: 0;
     background: #6AB023;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;
 }
 
 .head {
@@ -32,12 +34,6 @@ body {
     margin-left: auto;
 }
 
-.busca input {
-    width: 100%;
-    border: none;
-    focus: none;
-    margin-left: 10px;
-}
 
 .notification img, 
 .user img {
@@ -126,16 +122,18 @@ aside {
     height: 70%;
 }
 .box {
-    flex: 1; /* Cada box ocupa espaço igual */
+    min-width: 200px;/* Cada box ocupa espaço igual */
     margin: 0 5px; /* Espaçamento entre as boxes */
     padding: 20px;
     background-color: #ffffff; /* Cor de fundo branca */
     border-radius: 10px; /* Border radius médio */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 .box.middle {
-    flex: 2; /* Aumenta a largura da div do meio */
+    min-width: 500px; /* Aumenta a largura da div do meio */
 }
 .box:last-child {
     margin-right: 0; /* Remove margem direita da última box */
@@ -146,4 +144,265 @@ aside {
     padding: 20px;
     text-align: center;
     height: 23%;
+}
+.div1 {
+    background-color: ##F0FAE5; /* Cor de fundo para a div superior */
+    padding: 10px;
+    flex: 0 0 60px; /* Define uma altura fixa para a div superior */
+    margin-bottom: 10px; /* Espaçamento entre as divs */
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    font-size: 14px; /* Tamanho menor para o texto */
+    border-radius: 10px; /* Border radius médio */
+    border: 1px solid #6AB023;
+}
+
+.div2 {
+    background-color: #FFFFFF; /* Cor de fundo para a div inferior */
+    padding: 10px;
+    flex: 1;
+    position: relative; /* A div inferior ocupa o restante do espaço */
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.botao {
+    width: 50%; /* Botão ocupa 80% da largura da div principal */
+    padding: 10px;
+    background-color: #6AB023; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px; /* Faz o botão ficar na parte inferior */
+    margin-left: auto; /* Alinha o botão à direita */
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: 0.8em; /* Tamanho menor para a data */
+    color: #777;
+}
+
+.saldo {
+    font-weight: bold; /* Deixa o saldo em negrito */
+    font-size: 2em;
+    margin-left: 5px; /* Espaço entre o título e o valor */ 
+}
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Fixo na tela */
+    z-index: 1; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    display: flex; /* Usar flexbox para centralizar */
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+}
+
+/* Estilos do conteúdo do Modal */
+.modal-content {
+    background-color: #ffffff; /* Cor de fundo do modal */
+    border: 1px solid #888; /* Borda do modal */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do modal */
+    max-width: 400px; /* Largura máxima do modal */
+    width: 100%; /* Largura padrão */
+}
+
+/* Estilos para perguntas */
+.pergunta {
+    margin-bottom: 15px; /* Espaçamento entre as perguntas */
+}
+
+/* Estilos para o botão de fechar */
+.close,
+.adicionar {
+    width: 150px; /* Botão ocupa 80% da largura da div principal */
+    padding: 10px;
+    background-color: #6AB023; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px; /* Faz o botão ficar na parte inferior */
+    cursor: pointer;
+}
+.buttons {
+    display: flex; /* Usar flexbox para centralizar */
+    justify-content: space-between; /* Espaçamento entre os botões */
+    align-items: center; /* Centralizar verticalmente */
+    margin-top: 15px; /* Espaço entre as opções */
+}
+
+input[type="text"], input[type="number"], input[type="date"], select {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    transition: border-color 0.3s; /* Transição suave para a cor da borda */
+}
+
+
+/* Estilo ao focar nos inputs */
+input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #6AB023; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+.busca input {
+    width: 100%;
+    margin-left: 10px;
+    border: none; /* Remove a borda */
+    outline: none
+}
+
+.informacao {
+    display: flex; /* Usar flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaçar os elementos */
+    align-items: flex-start; /* Alinhar no topo */
+    padding: 10px;
+    border: 1px solid #ccc; /* Borda ao redor de cada item */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+
+.titulo-informacao {
+    font-weight: bold;
+    font-size: 1.2em; /* Tamanho menor para a data */
+}
+
+/* Estilo para o valor */
+.valor {
+    font-size: 1.1em; /* Tamanho maior para o valor */
+    text-align: center; /* Centraliza o texto */ /* Centralizar verticalmente */
+}
+
+/* Estilo para a data */
+.data {
+    font-size: 0.8em; /* Tamanho menor para a data */
+    color: #777; /* Cor mais clara para a data */
+    margin-top: 5px; /* Espaçamento acima da data */
+}
+
+.grafico {
+    width: 570px;
+}
+.grafico img{
+    width: 570px;
+    height: 440px;
+}
+
+.cartoes img {
+    height: 140px;
+}
+
+.cartoes {
+    margin-bottom:20px;
+}
+
+.progress-section {
+    text-align: center;
+    margin-top: 10px ;
+}
+
+
+.barra-progresso {
+    position: relative;
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    height: 10px;
+
+}
+
+.progresso {
+    background-color: #000000;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.numeros {
+    position: absolute;
+    width: 100%;
+    top: -25px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.total {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.div-baixo {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.title-image {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+}
+
+.small-image {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column; /* Coloca o título acima do subtítulo */
+}
+
+.title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin: 0;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: gray; /* Linha cinza */
+    margin: 10px 0;
+}
+
+.middle-section {
+    display: flex;
+    justify-content: center; /* Centraliza as divs clicáveis */
+    gap: 20px; /* Espaçamento entre as divs */
+    padding: 20px;
+}
+
+.clickable-div {
+    width: 100px; /* Largura das divs clicáveis */
+    height: 100px; /* Altura das divs clicáveis */
+    background-color: lightblue; /* Cor de fundo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Bordas arredondadas */
 }

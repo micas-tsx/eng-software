@@ -15,7 +15,7 @@
         </div>
         <div class="busca">
             <input type="text" class="txtBusca" />
-            <img class="lupa" src="assets/images/lupa.svg" alt="buscar">
+            <img class="lupa" src="assets/images/lupa.svg" style="cursor: pointer" alt="buscar">
         </div>
         <div class="icons">
             <div class="notification">
@@ -45,11 +45,123 @@
     
         <div class="content active container" id="content1">
             <div class="row">
-                <div class="box">Div 1</div>
-                <div class="box middle">Div 2</div>
-                <div class="box">Div 3</div>
+                <div class="box">
+                    <div class="div1" id="div1">
+                        <span class="titulo">Saldo do Mês:</span>
+                        <span class="saldo" onclick="abrirModal()" id="saldo">R$ 0,00</span>
+                    </div>
+
+                    <div class="div2">
+                        <div id="informacoes" style="margin-top: 20px;">
+                            <div id="listaInformacoes">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="botao" id="openModal">Adicionar</button>
+                </div>
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Registro de Lucro ou Prejuízo</h2>
+                        
+                        <div class="pergunta">
+                            <label for="text">Qual foi o gastou/lucro</label>
+                            <input type="text" id="titulo" placeholder="Digite o titulo do gasto" required>
+                        </div>
+                        <div class="pergunta">
+                            <label for="tipo">Você teve lucro ou prejuízo?</label>
+                            <select id="tipo">
+                                <option value="lucro">Lucro</option>
+                                <option value="prejuizo">Gasto</option>
+                            </select>
+                        </div>
+                        <div class="pergunta">
+                            <label for="valor">Qual foi o valor?</label>
+                            <input type="number" id="valor" placeholder="Digite o valor" required>
+                        </div>
+                        <div class="pergunta">
+                            <label for="data">Data:</label>
+                            <input type="date" id="data" required>
+                        </div>
+                        <div class="buttons">
+                            <button class="adicionar" onclick="adicionarInformacao()">Adicionar</button>
+                            <button class="close" onclick="fecharModal()">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box middle">
+                    <div class="grafico">
+                        <img src="assets/images/grafico-section.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="cartoes">
+                        <img src="assets/images/cartao-black.svg" alt="">   
+                    </div>
+
+                    <div class="progress-section">
+                        <div class="barra-progresso">
+                            <div class="progresso" style="width: 25%"></div>
+                            <div class="numeros">
+                                <span class="valor-atual">25%</span>
+                                <span class="porcentagem">100%</span>
+                            </div>
+                        </div>
+                        <div class="total">
+                            10,000
+                        </div>
+                        <div class="div2">
+                            <div id="informacoes" style="margin-top: 20px;">
+                                <div id="listaInformacoes">
+                                    <div class="informacao">
+                                        <div>
+                                            <div class="titulo-informacao">divida</div>
+                                            <div class="data">10-11-2024</div>
+                                        </div>
+                                        <div class="valor">
+                                            -R$3000,00
+                                        </div>
+                                    </div>
+                                    <div class="informacao">
+                                        <div>
+                                            <div class="titulo-informacao">aluguel</div>
+                                            <div class="data">14-11-2024</div>
+                                        </div>
+                                        <div class="valor">
+                                            -R$1500,00
+                                        </div>
+                                    </div> 
+                                    <div class="informacao">
+                                        <div>
+                                            <div class="titulo-informacao">salario</div>
+                                            <div class="data">08-11-2024</div>
+                                        </div>
+                                        <div class="valor">
+                                            +R$2000,00
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
-            <div class="bottom-box">Div Abaixo</div>
+            <div class="bottom-box">
+                <div class="div-baixo">
+                    <div class="top-section">
+                        <img src="assets/images/jornal.svg" alt="Imagem" class="small-image">
+                        <h1 class="title">Título</h1>
+                        <h2 class="subtitle">Subtítulo</h2>
+                        
+                    </div>
+                    <hr class="divider">
+                    
+                </div>
+            </div>
         </div>
         
         <div class="content" id="content2">
