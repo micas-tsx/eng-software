@@ -23,18 +23,6 @@ function setActive(element, contentId) {
     activeContent.classList.add('active');
 }
 
-function selectButton(element) {
-    // Remove a classe 'active' de todos os botões
-    const buttons = document.querySelectorAll('.menu-button');
-    // biome-ignore lint/complexity/noForEach: <explanation>
-    buttons.forEach(button => {
-        button.classList.remove('active');
-    });
-
-    // Adiciona a classe 'active' ao botão clicado
-    const button = element.querySelector('.menu-button');
-    button.classList.add('active');
-}
 
 // Obtém o modal
 // biome-ignore lint/style/noVar: <explanation>
@@ -122,4 +110,18 @@ function adicionarInformacao() {
 
     // Fecha o modal
     fecharModal();
+}
+
+function selectBox(selectedBox) {
+    // Seleciona todas as caixas
+    const boxes = document.querySelectorAll('.box-box');
+
+    // Remove a classe 'selected' de todas as caixas
+    // biome-ignore lint/complexity/noForEach: <explanation>
+        boxes.forEach(box => {
+        box.classList.remove('active-box');
+    });
+
+    // Adiciona a classe 'selected' à caixa que foi clicada
+    selectedBox.classList.add('active-box');
 }

@@ -6,6 +6,7 @@
     <title>MyFinance</title>
 
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/tela2.css">
 
 </head>
 <body>
@@ -28,18 +29,26 @@
     </header>
     
     <main>
-        <aside>
+        <aside> 
             <div class="menu-item" id="link1-item" onclick="setActive(this, 'content1')">
-                <button class="menu-button" onclick="showSection('section1', this)">Link 1</button>
+                <button class="menu-button" onclick="showSection('section1', this)">
+                    <img src="assets/images/home.svg" alt="">
+                </button>
             </div>
             <div class="menu-item" id="link2-item" onclick="setActive(this, 'content2')">
-                <button class="menu-button" onclick="showSection('section2', this)">Link 2</button>
+                <button class="menu-button" onclick="showSection('section2', this)">
+                    <img src="assets/images/cartaozinho.svg" alt="">
+                </button>
             </div>
             <div class="menu-item" id="link3-item" onclick="setActive(this, 'content3')">
-                <button class="menu-button" onclick="showSection('section3', this)">Link 3</button>
+                <button class="menu-button" onclick="showSection('section3', this)">
+                    <img src="assets/images/grafico.svg" alt="">
+                </button>
             </div>
             <div class="menu-item" id="link4-item" style="margin-top: auto;">
-                <button class="menu-button" onclick="showSection('section4', this)">Link 4</button>
+                <button class="menu-button">
+                    <img src="assets/images/sair.svg" alt="">
+                </button>
             </div>
         </aside>
     
@@ -48,7 +57,7 @@
                 <div class="box">
                     <div class="div1" id="div1">
                         <span class="titulo">Saldo do Mês:</span>
-                        <span class="saldo" onclick="abrirModal()" id="saldo">R$ 0,00</span>
+                        <span class="saldo" id="saldo">R$ 0,00</span>
                     </div>
 
                     <div class="div2">
@@ -150,24 +159,134 @@
                     </div>
                 </div>
             </div>
+
             <div class="bottom-box">
-                <div class="div-baixo">
-                    <div class="top-section">
-                        <img src="assets/images/jornal.svg" alt="Imagem" class="small-image">
-                        <h1 class="title">Título</h1>
-                        <h2 class="subtitle">Subtítulo</h2>
-                        
+                <div class="top">
+                    <div class="text-area">
+                        <div class="title-notice">
+                            <img src="assets/images/jornal.svg" alt="">
+                            <h1>Novidades</h1>
+                        </div>
+                        <h2>Fique por dentro das novidades que rola pelo mundo!</h2>
                     </div>
-                    <hr class="divider">
-                    
+                    <div class="boxes-area">
+                        <div class="box-box active-box" onclick="selectBox(this)">
+                            Ultimas Novidades
+                        </div>
+                        <div class="box-box" onclick="selectBox(this)">
+                            Atualizações financeiras
+                        </div>
+                        <div class="box-box" onclick="selectBox(this)">
+                            Dicas Financeiras
+                        </div>
+                        <div class="box-box" onclick="selectBox(this)">
+                            Meus favoritos
+                        </div>
+                    </div>
+                </div>
+                
+        
+                <hr> <!-- Linha horizontal -->
+        
+                <div class="bottom">
+                    <a href="https://www.msn.com/pt-br/dinheiro/favoritos?id=apnmnm&tab=Markets&ocid=msedgdhp&cvid=9dcc95cdc9234a3cb4a35ea5986ca658&pc=U531&ei=43">
+                        <div class="notice">
+                            <img src="assets/images/image-nf.svg" alt="Imagem A" class="box-image">
+                            <div class="box-text">
+                                <h3>Título A</h3>
+                                <h4>Lorem ipsum dolor sit amet</h4>
+                                <p class="date">01/01/2023</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a  href="https://www.msn.com/pt-br/dinheiro/favoritos?id=apnmnm&tab=Markets&ocid=msedgdhp&cvid=9dcc95cdc9234a3cb4a35ea5986ca658&pc=U531&ei=43">
+                        <div class="notice">
+                            <img src="assets/images/image-nf.svg" alt="Imagem A" class="box-image">
+                            <div class="box-text">
+                                <h3>Título A</h3>
+                                <h4>Lorem ipsum dolor sit amet</h4>
+                                <p class="date">01/01/2023</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a  href="https://www.msn.com/pt-br/dinheiro/favoritos?id=apnmnm&tab=Markets&ocid=msedgdhp&cvid=9dcc95cdc9234a3cb4a35ea5986ca658&pc=U531&ei=43">
+                        <div class="notice">
+                            <img src="assets/images/image-nf.svg" alt="Imagem A" class="box-image">
+                            <div class="box-text">
+                                <h3>Título B</h3>
+                                <h4>Lorem ipsum dolor sit amet</h4>
+                                <p class="date">01/01/2023</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a  href="https://www.msn.com/pt-br/dinheiro/favoritos?id=apnmnm&tab=Markets&ocid=msedgdhp&cvid=9dcc95cdc9234a3cb4a35ea5986ca658&pc=U531&ei=43">
+                        <div class="notice">
+                            <img src="assets/images/image-nf.svg" alt="Imagem A" class="box-image">
+                            <div class="box-text">
+                                <h3>Título D</h3>
+                                <h4>Lorem ipsum dolor sit amet</h4>
+                                <p class="date">01/01/2023</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
         
         <div class="content" id="content2">
-            <div class="div2">Div do Link 2</div>
+            <div class="t2-container">
+                <div class="t2-top">
+                    <div class="title-notice">
+                        <img src="assets/images/jornal.svg" alt="">
+                        <h1>Novidades</h1>
+                    </div>
+                    <h2>Genrenciamento Financeiro</h2>
+                
+                    <div class="t2-divider"></div>
+                
+                    <div class="t2-bottom">
+                    <div class="t2-box">
+                        <div class="t2-box-name">Saldo do mês</div>
+                        <div class="t2-box-value">R$ 00,00</div>
+                    </div>
+                    <div class="t2-box receitas">
+                        <div class="t2-box-name ">Receitas do mês</div>
+                        <div class="t2-box-value">R$ 00,00</div>
+                    </div>
+                    <div class="t2-box despesas">
+                        <div class="t2-box-name ">Despesas do mês</div>
+                        <div class="t2-box-value">R$ 00,00</div>
+                    </div>
+                    <div class="t2-box">
+                        <div class="t2-box-name">Fatura total dos cartões no mês</div>
+                        <div class="t2-box-value">R$ 00,00</div>
+                    </div>
+                    <div class="t2-box">
+                        <div class="t2-box-name">Metas do mês</div>
+                        <div class="t2-box-value">R$ 00,00</div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="bottom-container">
+                    <div class="t2-extra" style="display: flex;">
+                        <div class="clickable" data-value="Div 1">Meus Cartões</div>
+                        <div class="clickable" data-value="Div 2">Receitas / Despesas</div>
+                        <div class="clickable" data-value="Div 3">Minhas Metas</div>
+                        <div class="clickable" data-value="Div 4">Gráficos</div>
+                        <div class="clickable" data-value="Div 5">Historico Detalhado</div> 
+                    </div>
+                    
+                    <div class="t2-title">Título Abaixo</div>
+                    <div class="t2-subtitle">Este é um subtítulo que descreve a seção abaixo.</div>
+                    <button class="botao" id="openModal">Adicionar</button> 
+                </div>
+
+                
+            </div> 
         </div>
 
+        
         <div class="content" id="content3">
             <div class="div3">Div do Link 3 (maior)</div>
         </div>
