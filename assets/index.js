@@ -112,16 +112,27 @@ function adicionarInformacao() {
     fecharModal();
 }
 
-function selectBox(selectedBox) {
-    // Seleciona todas as caixas
-    const boxes = document.querySelectorAll('.box-box');
+document.getElementById('addItem').onclick = () => {
+    const input1 = document.getElementById('input1').value;
+    const input2 = document.getElementById('input2').value;
+    const input3 = document.getElementById('input3').value;
+    const input4 = document.getElementById('input4').value;
+    const input5 = document.getElementById('input5').value;
 
-    // Remove a classe 'selected' de todas as caixas
-    // biome-ignore lint/complexity/noForEach: <explanation>
-        boxes.forEach(box => {
-        box.classList.remove('active-box');
-    });
+    const table = document.getElementById('itemTable').getElementsByTagName('tbody')[0];
+    const newRow = table.insertRow();
 
-    // Adiciona a classe 'selected' à caixa que foi clicada
-    selectedBox.classList.add('active-box');
-}
+    newRow.insertCell(0).innerText = input1;
+    newRow.insertCell(1).innerText = input2;
+    newRow.insertCell(2).innerText = input3;
+    newRow.insertCell(3).innerText = input4;
+    newRow.insertCell(4).innerText = input5;
+
+    // Limpar os inputs após adicionar
+    document.getElementById('input1').value = '';
+    document.getElementById('input2').value = '';
+    document.getElementById('input3').value = '';
+    document.getElementById('input4').value = '';
+    document.getElementById('input5').value = '';
+};
+

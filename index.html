@@ -40,11 +40,6 @@
                     <img src="assets/images/cartaozinho.svg" alt="">
                 </button>
             </div>
-            <div class="menu-item" id="link3-item" onclick="setActive(this, 'content3')">
-                <button class="menu-button" onclick="showSection('section3', this)">
-                    <img src="assets/images/grafico.svg" alt="">
-                </button>
-            </div>
             <div class="menu-item" id="link4-item" style="margin-top: auto;">
                 <button class="menu-button">
                     <img src="assets/images/sair.svg" alt="">
@@ -235,54 +230,47 @@
         
         <div class="content" id="content2">
             <div class="t2-container">
-                <div class="t2-top">
-                    <div class="title-notice">
-                        <img src="assets/images/jornal.svg" alt="">
-                        <h1>Novidades</h1>
-                    </div>
-                    <h2>Genrenciamento Financeiro</h2>
                 
-                    <div class="t2-divider"></div>
-                
-                    <div class="t2-bottom">
-                    <div class="t2-box">
-                        <div class="t2-box-name">Saldo do mês</div>
-                        <div class="t2-box-value">R$ 00,00</div>
-                    </div>
-                    <div class="t2-box receitas">
-                        <div class="t2-box-name ">Receitas do mês</div>
-                        <div class="t2-box-value">R$ 00,00</div>
-                    </div>
-                    <div class="t2-box despesas">
-                        <div class="t2-box-name ">Despesas do mês</div>
-                        <div class="t2-box-value">R$ 00,00</div>
-                    </div>
-                    <div class="t2-box">
-                        <div class="t2-box-name">Fatura total dos cartões no mês</div>
-                        <div class="t2-box-value">R$ 00,00</div>
-                    </div>
-                    <div class="t2-box">
-                        <div class="t2-box-name">Metas do mês</div>
-                        <div class="t2-box-value">R$ 00,00</div>
-                    </div>
-                    </div>
-                </div>
 
                 <div class="bottom-container">
-                    <div class="t2-extra" style="display: flex;">
-                        <div class="clickable" data-value="Div 1">Meus Cartões</div>
-                        <div class="clickable" data-value="Div 2">Receitas / Despesas</div>
-                        <div class="clickable" data-value="Div 3">Minhas Metas</div>
-                        <div class="clickable" data-value="Div 4">Gráficos</div>
-                        <div class="clickable" data-value="Div 5">Historico Detalhado</div> 
-                    </div>
-                    
-                    <div class="t2-title">Título Abaixo</div>
-                    <div class="t2-subtitle">Este é um subtítulo que descreve a seção abaixo.</div>
-                    <button class="botao" id="openModal">Adicionar</button> 
-                </div>
-
                 
+                    <div class="t2-title">Tabela de gastos do Cartões</div>
+                    <div class="t2-subtitle">Gerenciamento Financeiro</div>
+
+                    <div class="container">
+                        <select class="input-sla" id="input1">
+                            <option value="">Nome do cartão</option>
+                            <option value="Itau Black">Itau Black</option>
+                            <option value="Nubank">Nubank</option>
+                            <option value="Banco do Brasil">Banco do Brasil</option>
+                        </select>
+                        <select class="input-sla" id="input2">
+                            <option value="">Selecione a Opção 2</option>
+                            <option value="Alimentação">Alimentação</option>
+                            <option value="Transporte">Transporte</option>
+                            <option value="Outro Gasto">Outro Gasto</option>
+                        </select>
+                        <input class="input-sla" type="text" id="input3" placeholder="Nome da despesa">
+                        <input class="input-sla" type="date" id="input4">
+                        <input class="input-sla" type="number" id="input5" placeholder="Valor">
+                        <button class="butao" id="addItem">Adicionar</button>
+                    </div>
+
+                    <table id="itemTable">
+                        <thead>
+                            <tr>
+                                <th>Item 1</th>
+                                <th>Item 2</th>
+                                <th>Item 3</th>
+                                <th>Item 4</th>
+                                <th>Item 5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Novos itens serão adicionados aqui -->
+                        </tbody>
+                    </table>
+                </div>
             </div> 
         </div>
 
