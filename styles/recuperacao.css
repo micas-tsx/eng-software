@@ -1,0 +1,125 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estrutura Principal */
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden; /* Remove o scroll */
+}
+
+/* Seções laterais com gradiente */
+.left-section, .right-section {
+    width: 23%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #406A15, #7ED029);
+}
+
+/* Centralização de Conteúdo */
+.center-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 20px;
+    gap: 20px;
+    height: 100vh;
+}
+
+/* Logo */
+#icon {
+    margin-top: -50px; /* Ajuste para subir a logo */
+    height: 180px;
+    max-width: 200px;
+}
+
+/* Título */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #66b122;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Descrição */
+.description {
+    text-align: center;
+    font-size: 14px;
+    color: #406A15;
+    margin-bottom: 30px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Formulário */
+.formularios {
+    width: 400px;
+    text-align: left;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Grupos do Formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #66b122;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #5aa11d;
+}
+
+.btn-secondary {
+    background-color: transparent; /* Sem fundo para o botão */
+    color: #406A15;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-top: 10px; /* Espaçamento entre "Enviar" e "Cancelar" */
+    text-align: center; /* Centraliza o texto */
+    display: block; /* Garante que ele fique alinhado no centro */
+    width: 100%; /* Ocupa toda a largura do formulário */
+}

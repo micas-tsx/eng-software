@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="/styles/recuperacao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="left-section"></div>
+    <div class="center-section">
+        <!-- Logo -->
+        <img id="icon" src="/images/shortcut.png" alt="Logo">
+        
+        <!-- Título -->
+        <h1>Recuperar Senha</h1>
+        
+        <!-- Descrição -->
+        <p class="description">
+            Crie uma nova senha e insira no campo abaixo.<br>
+            Certifique-se que ambas estão iguais e atendem aos requisitos de segurança.
+        </p>
+        
+        <!-- Formulário -->
+        <form>
+            <div class="formularios">
+                <div class="form-group">
+                    <label for="senha">Nova Senha</label>
+                    <input type="text" id="senha" name="senha" placeholder="Insira a nova senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmar">Confirmar senha</label>
+                    <input type="text" id="confirmar" name="confirmar" placeholder="Confirme a nova senha inserida" required>
+                </div>
+            </div>
+            <!-- Botões -->
+            <button type="submit" class="btn-primary">Salvar</button>
+            <button type="button" class="btn-secondary">Cancelar</button>
+        </form>
+    </div>
+    <div class="right-section"></div>
+</body>
+</html>

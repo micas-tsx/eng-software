@@ -1,0 +1,69 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden; /* Adiciona rolagem somente no conteúdo necessário */
+}
+
+h1 {
+    font-size: 24px; /* Tamanho maior do texto */
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    margin-top: -20px; /* Move o título mais para cima */
+    color: #66b122;
+}
+
+.center-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    background-color: #ffffff;
+    overflow-y: auto; /* Permite rolagem, se necessário */
+    padding: 20px; /* Adiciona espaço interno */
+    height: 100vh; /* Garante ocupação total da altura */
+    gap: 20px; /* Espaçamento entre a imagem e o botão */
+}
+
+/* Seções laterais com gradiente */
+.left-section, .right-section {
+    width: 23%; /* Define a largura das seções laterais */
+    height: 100vh;
+    background: linear-gradient(to bottom, #406A15, #7ED029); /* Gradiente verde */
+}
+
+.btn-primary {
+    margin: 0; /* Remove qualquer margem que possa interferir */
+    padding: 10px 20px;
+    background-color: #66b122;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 45%;
+    font-weight: bolder;
+}
+
+.btn-primary:hover {
+    background-color: #5aa11d;
+}
+
+#icon {
+    margin-top: -100px; /* Ajuste o valor para subir mais */
+    display: block;
+    max-width: 100%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}

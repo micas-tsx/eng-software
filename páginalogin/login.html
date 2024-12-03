@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myfinance</title>
+    <link rel="shortcut icon" href="/images/shortcut.png" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <!-- Lado esquerdo com mensagem de boas-vindas -->
+          <div class="col-md-6 welcome-section">
+            <i></i>
+            <img id="fontediv" src="/images/fontediv.png">
+            <img id="logodiv" src="/images/logodiv.png">
+            <p class="textodiv">Crie a sua conta e comece a organizar as suas finanças de uma forma simples!</p>
+            <a class="btn-create-account" href="../cadastro/cadastro.html">Criar conta</a>
+          </div>
+          
+          <!-- Lado direito com formulário de login -->
+          <div class="col-md-6 login-section d-flex align-items-center justify-content-center">
+            <div class="login-box">
+                <div class="logo">
+                    <img src="/images/Frame.png" alt="My Finance Logo" class="logo-image">
+                </div>
+                <form>
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><img src="/images/Data.png" alt="Ícone de usuário" style="width: 16px;"></span>
+                          </div>
+                          <input type="email" class="form-control" id="email" placeholder="Usuário ou email">
+                        </div>
+                      </div>
+                      
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><img src="/images/lock.png" alt="Ícone de senha" style="width: 16px;"></span>
+                          </div>
+                          <input type="password" class="form-control" id="password" placeholder="Senha">
+                        </div>
+                      </div>
+                <div class="form-check d-flex justify-content-flex-start align-items-center">
+                    <div>
+                      <input type="checkbox" class="form-check-input" id="remember">
+                      <label class="form-check-label" for="remember"><b>Mantenha-me Conectado</b></label>
+                    </div>
+                </div>
+                <div class="botao">
+                <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                </div>
+                </form>
+                <div class="access-difficulty">
+                  <p>Está com dificuldade para acessar sua conta? <a href="../recuperacao/recuperacao.html"><p>Recuperar Senha</p></a></p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
